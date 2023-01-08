@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
 html {
     height: 100%;
     font-size: 2vh;
-    font-family: arial;
+    font-family: 'Open Sans', arial;
     background-color: var(--mainColor);
+
 }
 :root {
     --mainColor: #ea580c;
@@ -10,7 +12,7 @@ html {
     --mildColor: #ffedd5;
     --blackColor: #262626;
     --whiteColor: #fafafa;
-    --boxShadow: 0px 1px 3px 0.5px var(--blackColor);
+    --boxShadow: 0px 0 0 0;
 }
 html * {
     box-sizing: border-box;
@@ -58,13 +60,19 @@ body {
     column-gap: 4vw;
 }
 .optionsSection > button {
-    font-size: 1.4rem;
+    font-size: min(4.5vw, 1.2rem);
+    width: clamp(75px, 28vw, 200px);
+    height: 4vh;
     border-radius: 5px;
     border: none;
-    padding: 0.5vh 4vw;
-    font-weight: bold;
     background-color: var(--mainColor);
     color: var(--whiteColor);
+    cursor: pointer;
+    font-family: 'Open Sans';
+    font-weight: bold;
+}
+.optionsSection > button:hover {
+    text-decoration: underline;
 }
 
 /* HOME */
@@ -85,11 +93,11 @@ body {
 .menu {
     position: relative;
     top: 16vh;
-
 }
 .menuMain {
     background-color: var(--mildColor);
     height: 184vh;
+    
 }
 
 /* CONTACT */
