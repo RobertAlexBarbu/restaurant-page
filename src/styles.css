@@ -1,0 +1,109 @@
+html {
+    height: 100%;
+    font-size: 2vh;
+    font-family: arial;
+    background-color: var(--mainColor);
+}
+:root {
+    --mainColor: #ea580c;
+    --secondaryColor: #fb923c;
+    --mildColor: #ffedd5;
+    --blackColor: #262626;
+    --whiteColor: #fafafa;
+    --boxShadow: 0px 1px 3px 0.5px var(--blackColor);
+}
+html * {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    height: 100%;
+}
+#content {
+    height: 100%;
+    background-color: var(--mildColor);
+}
+/* HEADER */
+.header {
+    height: 16vh;
+    width: 100%;
+    box-shadow: var(--boxShadow);
+    position: fixed;
+    z-index: 1;
+}
+/* Name Section */
+.header .nameSection {
+    width: 100%;;
+    background-color: var(--mainColor);
+    height: 8vh;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding-left: 4vw;
+}
+.nameSection > .name {
+    height: 50%;
+    font-size: 1.8rem;
+    color: var(--whiteColor);
+    font-weight: bold;
+}
+
+/* Options Section */
+.header .optionsSection {
+    background-color: var(--secondaryColor);
+    height: 8vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 4vw;
+}
+.optionsSection > button {
+    font-size: 1.4rem;
+    border-radius: 5px;
+    border: none;
+    padding: 0.5vh 4vw;
+    font-weight: bold;
+    background-color: var(--mainColor);
+    color: var(--whiteColor);
+}
+
+/* HOME */
+.home {
+    position: relative;
+    top: 16vh;
+}
+.home1 {
+    height: 84vh;
+    background-color: var(--mildColor);
+}
+.home2 {
+    height: 79vh;
+    background-color: var(--whiteColor);
+}
+
+/* MENU */ 
+.menu {
+    position: relative;
+    top: 16vh;
+
+}
+.menuMain {
+    background-color: var(--mildColor);
+    height: 184vh;
+}
+
+/* CONTACT */
+.contact {
+    position: relative;
+    top: 16vh;
+
+}
+.contactMain {
+    background-color: var(--mildColor);
+    height: 84vh;
+}
+
+.footer {
+    height: 5vh;
+    background-color: var(--mainColor);
+}
