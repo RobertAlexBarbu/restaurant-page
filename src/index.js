@@ -1,5 +1,6 @@
 import './styles.css';
 import home from './home.js';
+import {text22b} from './home.js';
 import menu from './menu.js';
 import contact from './contact.js';
 import footer from './footer.js';
@@ -35,6 +36,7 @@ function component() {
         element.addEventListener('click', changeState);
         optionsSection.appendChild(element);
     })
+    text22b.addEventListener('click', changeState);
     let state = 'home';
     function changeState(event) {
         switch(state) {
@@ -54,6 +56,7 @@ function component() {
                 state = 'home';
                 break;
             case 'Menu':
+            case 'HERE':
                 content.appendChild(menu);
                 state = 'menu';
                 break;
