@@ -2,7 +2,6 @@ import './styles.css';
 import home from './home.js';
 import {text22b} from './home.js';
 import menu from './menu.js';
-import contact from './contact.js';
 import footer from './footer.js';
 
 
@@ -27,10 +26,8 @@ function component() {
     const option = [];
     option[0] = document.createElement('button');
     option[1] = document.createElement('button');
-    option[2] = document.createElement('button');
     option[0].textContent = 'Home';
     option[1].textContent = 'Menu';
-    option[2].textContent = 'Contact';
     option.forEach((element, index) => {
         element.classList.add('option');
         element.addEventListener('click', changeState);
@@ -46,9 +43,6 @@ function component() {
             case 'menu':
                 content.removeChild(menu);
                 break;
-            case 'contact':
-                content.removeChild(contact);
-                break;
         }
         switch(event.target.textContent) {
             case 'Home':
@@ -59,10 +53,6 @@ function component() {
             case 'HERE':
                 content.appendChild(menu);
                 state = 'menu';
-                break;
-            case 'Contact':
-                content.appendChild(contact);
-                state = 'contact';
                 break;
         }
         window.scrollTo(0, 0);
@@ -81,4 +71,3 @@ content.appendChild(component());
 content.appendChild(home);
 home.appendChild(footer);
 menu.appendChild(footer.cloneNode());
-contact.appendChild(footer.cloneNode());
